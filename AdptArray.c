@@ -76,6 +76,9 @@ PElement GetAdptArrayAt(PAdptArray pArr , int index)
         return pArr->copyFunc((pArr->pElemArr)[index]);
 }
 int GetAdptArraySize(PAdptArray pArr){
+    if(pArr==NULL){
+        return -1;
+    }
     return pArr->ArrSize;
 }
 void PrintDB(PAdptArray pArr){
